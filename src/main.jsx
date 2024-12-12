@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from './components/Home/Home';
 import Users from './components/Users/Users';
 import Comments from './components/Comments/Comments';
+import CommentDetails from './components/Coment Details/CommentDetails';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       path : '/comments',
       loader : () => fetch ('https://jsonplaceholder.typicode.com/comments'),
       element : <Comments></Comments>
+    },
+    {
+      path : '/comment/:commentId',
+      loader : ({params}) => fetch(`https://jsonplaceholder.typicode.com/comments/${params.commentId}`),
+      element : <CommentDetails></CommentDetails>
     }
   ]
   }

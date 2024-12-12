@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const SingleCommetn = ({ props }) => {
-    console.log(props)
-    const { name, email, body } = props
+    const { name, email, body, id } = props
     return (
         <div>
             <div className="card bg-base-100 image-full w-96 shadow-xl">
@@ -17,8 +16,8 @@ const SingleCommetn = ({ props }) => {
                     <h2 className="card-title">Name : {name}</h2>
                     <p>Email address : {email}</p>
                     <div className="card-actions justify-center">
-                        <Link>
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/comment/${id}`}>
+                            <button className="btn btn-primary">See more </button>
                         </Link>
                     </div>
                 </div>

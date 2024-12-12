@@ -5,7 +5,6 @@ import SingleCommetn from '../Navbar/SingleCommetn'
 
 const Comments = () => {
     const comment = useLoaderData()
-    console.log(comment)
     return (
         <div className='md:w-10/12 mx-auto w-full'>
             <h2>Comments : {comment.length}</h2>
