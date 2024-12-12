@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from './components/Home/Home';
 import Users from './components/Users/Users';
+import Comments from './components/Comments/Comments';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     {
       path : '/portfolio',
       element : <div>This is portfolio page</div>
+    },
+    {
+      path : '/comments',
+      loader : () => fetch ('https://jsonplaceholder.typicode.com/comments'),
+      element : <Comments></Comments>
     }
   ]
   }
