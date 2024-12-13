@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, useNavigate } from 'react-router-dom'
-import Galaxy from '../Galaxy details/Galaxy'
+import Navbar from '../Navbar/Navbar'
 
-const Hero = props => {
+const Hero = () => {
     const navigate = useNavigate()
 
     const showDetailsHandler = () => {
