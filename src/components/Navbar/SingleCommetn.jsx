@@ -1,9 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SingleCommetn = ({ props }) => {
-    const { name, email, body, id } = props
+    const { name, email, body, id } = props;
+
+    const navigate = useNavigate()
+
+    const  handleShow = () => {
+        navigate (`/comment/${id}`)
+    }
     return (
         <div>
             <div className="card bg-base-100 image-full w-96 shadow-xl">
@@ -19,6 +25,7 @@ const SingleCommetn = ({ props }) => {
                         <Link to={`/comment/${id}`}>
                             <button className="btn btn-primary">See more </button>
                         </Link>
+                        <button onClick={handleShow} className='btn'> Details</button>
                     </div>
                 </div>
             </div>
