@@ -7,6 +7,7 @@ import Users from './components/Users/Users';
 import Comments from './components/Comments/Comments';
 import CommentDetails from './components/Coment Details/CommentDetails';
 import Galaxy from './components/Galaxy details/Galaxy';
+import UsersService from './components/Users Service/UsersService';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
       path : '/user',
       loader : () => fetch('https://jsonplaceholder.typicode.com/users'),
       element : <Users></Users>
+    },
+    {
+      path : '/user/:userId',
+      loader : ({params}) => fetch (`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+      element: <UsersService></UsersService>
     },
     {
       path : '/portfolio',
