@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useLoaderData, useNavigate } from 'react-router-dom'
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom'
 
 const CommentDetails = () => {
     const details = useLoaderData()
-    // console.log(details)
+    const {commentId} = useParams()
     const navigate = useNavigate()
 
+    console.log(commentId);
+    // console.log(details)
     const handleBack = () => {
         navigate(-1)
     }

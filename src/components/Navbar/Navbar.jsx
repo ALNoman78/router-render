@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import './nav.css'
 
 const Navbar = () => {
     return (
@@ -25,25 +26,25 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><Link to='/'>Home</Link></li>
+                            <li><NavLink to='/'>Home</NavLink></li>
                             <li>
                                 <Link to=''>User Details</Link>
                                 <ul className="p-2">
-                                    <li><Link to='/user'> User</Link></li>
-                                    <li><Link to='portfolio'>Portfolio</Link></li>
+                                    <li><NavLink to='/user'> User</NavLink></li>
+                                    <li><NavLink to='portfolio'>Portfolio</NavLink></li>
                                 </ul>
                             </li>
-                            <li><Link to='/comments'>Comment</Link></li>
+                            <li><NavLink to='/comments'>Comment</NavLink></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">daisyUI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/user'> User</Link></li>
-                        <li><Link to='portfolio'>Portfolio</Link></li>
-                        <li><Link to='/comments'>Comment</Link></li>
+                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/user'> User</NavLink></li>
+                        <li><NavLink to='portfolio'>Portfolio</NavLink></li>
+                        <li><NavLink to='/comments'>Comment</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

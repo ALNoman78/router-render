@@ -8,11 +8,13 @@ import Comments from './components/Comments/Comments';
 import CommentDetails from './components/Coment Details/CommentDetails';
 import Galaxy from './components/Galaxy details/Galaxy';
 import UsersService from './components/Users Service/UsersService';
+import ErrorPage from './components/Error Page/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <Home></Home>,
+    errorElement : <ErrorPage></ErrorPage>,
     children : [
       {
       path : '/about',
