@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, useNavigate } from 'react-router-dom'
-import Navbar from '../Navbar/Navbar'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
     const navigate = useNavigate()
@@ -15,10 +14,10 @@ const Hero = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img
                         src="https://www.mobiledokan.co/wp-content/uploads/2024/10/Samsung-Galaxy-Z-Fold-Special.webp"
-                        className="max-w-sm rounded-lg" />
+                        className="max-w-sm rounded-lg w-full" />
                     <div>
-                        <h1 className="text-5xl font-bold">Samsung Galaxy Z Fold 5 </h1>
-                        <h3 className='text-5xl font-semibold my-4'>Galaxy AI is here</h3>
+                        <h1 className="md:text-5xl text-2xl font-bold">Samsung Galaxy Z Fold 5 </h1>
+                        <h3 className='md:text-5xl text-2xl font-semibold my-4'>Galaxy AI is here</h3>
                         <p className="py-6">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             quasi. In deleniti eaque aut repudiandae et a id nisi.

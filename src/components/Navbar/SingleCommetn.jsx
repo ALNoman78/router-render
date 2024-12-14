@@ -12,7 +12,7 @@ const SingleCommetn = ({ props }) => {
     }
     return (
         <div>
-            <div className="card bg-base-100 image-full w-96 shadow-xl">
+            <div className="card bg-base-100 image-full shadow-xl">
                 <figure>
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
